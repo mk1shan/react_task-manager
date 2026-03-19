@@ -8,9 +8,18 @@ import TaskForm from './components/TaskForm'
 import SearchBar from './components/SearchBar'
 
 
+
 function App() {
 
-const [task,setTask]=useState("");
+const [task,setTask]=useState("");//current input
+const [search,setSearch] =useState("");
+const [tasks,setTasks]=useState([]);//saved list (multiple e
+// wa save kranna)
+
+
+const handleaddTask =()=>{
+  setTasks([...tasks,task]);
+  setTask("");
 
 
   return (
@@ -18,12 +27,14 @@ const [task,setTask]=useState("");
    <div className="app">
       <div className="container">
         <Header />
-        <TaskForm task ={task} setTask={setTask}/>
-        <SearchBar/>
+       
+        <TaskForm task ={task} setTask={setTask}  handleaddTask={handleaddTask}/>
+        <SearchBar search={search} setSearch={setSearch}/>
+   
       </div>
     </div>
   )
-}
+}}
 
 
 export default App

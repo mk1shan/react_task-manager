@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TaskForm = ({task,setTask}) => {
+const TaskForm = ({task,setTask,handleaddTask}) => {
     return (
         <div>
             <input className='input'
@@ -10,7 +10,7 @@ const TaskForm = ({task,setTask}) => {
                     onChange={(e)=>setTask(e.target.value)}
                 />
 
-            <button className='addbutton'>add</button>
+            <button className='addbutton' onClick={handleaddTask}>add</button>
 
         </div>
     )
