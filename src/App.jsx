@@ -6,6 +6,7 @@ import './App.css'
 import Header from './components/Header'
 import TaskForm from './components/TaskForm'
 import SearchBar from './components/SearchBar'
+import TaskList from './taskList'
 
 
 
@@ -18,9 +19,10 @@ const [tasks,setTasks]=useState([]);//saved list (multiple e
 
 
 const handleaddTask =()=>{
+  if(task=== "") return;
   setTasks([...tasks,task]);
   setTask("");
-
+}
 
   return (
 
@@ -30,11 +32,11 @@ const handleaddTask =()=>{
        
         <TaskForm task ={task} setTask={setTask}  handleaddTask={handleaddTask}/>
         <SearchBar search={search} setSearch={setSearch}/>
-   
+        <TaskList tasks={tasks}/>
       </div>
     </div>
   )
-}}
+}
 
 
 export default App
