@@ -1,0 +1,40 @@
+.app{
+  min-height:100vh;
+  background-color: hsl(113, 78%, 57%);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+.container{
+  width:400px;
+  background-color:white;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 4px 14px rgba(0, 0, 0, 0.08);
+text-align:center;
+}
+.title{
+  margin:0;
+  font-size:32px;
+  color:hsl(231, 78%, 57%);
+}
+
+.subtitle{
+  margin-top:10px;
+  margin-bottm:24px;
+
+}
+.addbutton{
+background-color:hsl(145, 78%, 57%);
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+}
+
+.addbutton:hover{
+  background-color: hsl(145, 100%, 15%);
+}
