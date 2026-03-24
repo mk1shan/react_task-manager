@@ -47,3 +47,28 @@ font-size:16px;
   text-align:left;
   font-size:14px;
 }
+
+.taskItemRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eff6ff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.taskText {
+  color: #1e3a8a;
+  font-size: 14px;
+}
+
+.deleteButton {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}

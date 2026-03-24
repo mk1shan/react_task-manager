@@ -6,7 +6,7 @@ import './App.css'
 import Header from './components/Header'
 import TaskForm from './components/TaskForm'
 import SearchBar from './components/SearchBar'
-import TaskList from './taskList'
+import TaskList from './components/taskList'
 
 
 
@@ -19,10 +19,18 @@ const [tasks,setTasks]=useState([]);//saved list (multiple e
 
 
 const handleaddTask =()=>{
-  if(task=== "") return;
+  if(task.trim()=== "") return;//emty ho space nm eth add nowenna
   setTasks([...tasks,task]);
   setTask("");
 }
+
+const filterTasks =tasks.filter((item)=>
+item.toLowerCase().includes(search.toLocaleLowerCase()))
+
+
+const handleDeleteTask = (taskIndex) =>{
+  const updatedTasks = tasks.filter((_,index)=>index !== taskIndex);
+  setTasks(updatedTasks);};
 
   return (
 
@@ -32,7 +40,7 @@ const handleaddTask =()=>{
        
         <TaskForm task ={task} setTask={setTask}  handleaddTask={handleaddTask}/>
         <SearchBar search={search} setSearch={setSearch}/>
-        <TaskList tasks={tasks}/>
+        <TaskList tasks={filterTasks}  handleDeleteTask= {handleDeleteTask}/>
       </div>
     </div>
   )
