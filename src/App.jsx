@@ -12,26 +12,21 @@ import StudentCad from './components/StudentCad'
 import MathExample from './components/MathExample'
 import ProfileCrad from './components/ProfileCrad'
 import Assesment1 from './components/Assesment1'
+import UseState from './components/UseState'
 
+import Student from './components/Student'
+
+import Onclikc from './components/Onclik'
+
+import Usestate2 from './components/Usestate2'
 function App() {
 
 
 return(
   <div>
 
-
-
-    {/* <Practise1/>
-    <ProfileCrad/>
-    */}
-<Assesment1 name="mudipa" course ="it" age="25"></Assesment1>
-<Assesment1 name="mudipa2" course ="it2" age="252"></Assesment1>
-<Assesment1 name="mudipa3" course ="it3" age="253"></Assesment1>
-
-
-{/* <StudentCad name = "MUDIPA" course = "software "></StudentCad>
-<StudentCad name = "MUDIPA2" course = "software 2"></StudentCad> */}
-
+<Onclikc/>
+<Usestate2/>
 
   </div>
 )
